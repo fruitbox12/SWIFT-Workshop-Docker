@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: pull-request-action
-        uses: vsoch/pull-request-action@latest
+        uses: devjoes/pr-automation@v0.1.0
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
           BRANCH_PREFIX: "develop/"
