@@ -26,4 +26,7 @@ jobs:
         with:
           push: true
           tags: fruitbox12/flask-workshop:Latest
-   
+          run: |
+            docker run --rm -d --name FLASK-APP -p 8000:8000 flask-workshop
+            docker run --link FLASK-APP:FLASK-APP waisbrot/wait
+            curl --fail http://localhost:8000
